@@ -1,0 +1,1 @@
+& d:/triangulum/alpha/website/.venv/Scripts/activate.ps1

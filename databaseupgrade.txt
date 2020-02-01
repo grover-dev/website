@@ -1,0 +1,6 @@
+if need to add/remove columns:
+first move manager.run() out of init
+flask db stamp head
+python run.py db migrate
+move manager.run() back into init
+python run.py db upgrade

@@ -1,0 +1,215 @@
+
+
+
+/* Title CSS Below */
+.title{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:  0;
+    text-align: center;
+    margin-top: -20px;
+}
+.title h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    z-index: 999;
+    margin-bottom: 3px;
+    padding: 0px;
+}
+
+/* Navbar CSS Below */
+.navbar{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 35px;
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+/*addition to shorten the border above the nav bar*/
+.navbar ul:before{   /*Shortened border based on https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 230px; /* Change this to whatever width you want. */
+    position: sticky;
+    top: 2px;
+    margin-top: 1px; /* This creates some space between the element and the border. */
+    border-bottom: 2px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
+
+/*addition to shorten the border below the nav bar*/
+.navbar ul:after{   /*Shortened border based on https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 230px; /* Change this to whatever width you want. */
+    position: sticky;
+    margin-top: -2px; /* This creates some space between the element and the border. */
+    border-bottom: 2px solid black; /* This creates the border. Replace black with whatever color you want. */
+    margin-bottom: 10px;
+}
+
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    font-size: 10.5pt;
+    display: block;
+    padding: 14px 16px;
+    color: black;
+    background-color: white; 
+    text-decoration: none;
+}
+.navbar a:hover:not(.active) {
+    color: white;
+    background-color: black;
+}
+.navbar a:active{
+    background-color: black;
+}
+
+
+/* hoverable drop down code pulled form: https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+
+
+/*post CSS Below */
+.post{
+    margin-top: -10px;
+    margin-left: 100px;
+    margin-right: 120px;
+    ont-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+}
+
+.post ul:before{   /*Shortened border based on https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 100%; /* Change this to whatever width you want. */
+    top: 2px;
+    margin-top: 1px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.post a{
+    text-decoration: none;
+    color: black;
+}
+
+.post a:hover{
+    color: darkgray;
+}
+
+
+.post h1{
+    text-align: left;
+}
+
+.post .post-text{
+    font-size: 18pt;
+    text-align: left;
+}
+
+.post img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post .post-timestamp{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    display:block;
+    text-align: left;
+}
+
+
+
+.post-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.post-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:block;
+}
+
+.sentinel{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:block;
+    text-align: center;
+}
+
+.about-post-backup{
+    visibility: hidden;
+}
+
+
+/*404 CSS Below*/
+.p404 {
+    margin-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    text-align: center;   
+}
+
+/*about CSS Below*/
+.about{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    margin-left: 140px;   
+    margin-top: -30px;
+    margin-right: 140px;
+}
+.about h1{
+    text-align: left;
+}
+
+.about .text{
+    font-size: 18pt;
+    text-align: left;
+}
+
+.about .image{
+    height: 50px;
+    width: 50px;
+}
+.about .image-bigger{
+    height: 50px;
+    width: 50px;
+}

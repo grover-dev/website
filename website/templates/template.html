@@ -1,0 +1,55 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block metas %}
+<meta charset="utf-8">
+{% endblock %}
+
+{% block html_attribs %}
+lang="en"
+{% endblock %}
+
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('.static', filename='apple-touch-icon.png')}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('.static', filename='favicon-32x32.png')}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('.static', filename='favicon-16x16.png')}}">
+<link rel="manifest" href="{{url_for('.static', filename='site.webmanifest')}}">
+{% endblock %}
+
+{% block title %}
+{% if title %}{{ title.title }} - Tim K{% else %}Tim's Page{% endif %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block navbar %}
+<div class="title">
+    <h1 id = "title"> 
+        {% if title %}{{ title.title }} {% else %}Tim K{% endif %}
+    </h1>
+</div>
+<nav class="navbar sticky-top">
+    <ul>
+        <li>
+            <a href="/index">Home</a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a href="/projects" class = "dropbutton">Projects</a>
+                <div class="dropdown-content">
+                    <a href = "/short-term">Short Term Projects</a>
+                    <a href = "/mid-term">Medium Term Projects</a>
+                    <a href = "/long-term">Long Term Projects</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block app_content %}{% endblock %}
