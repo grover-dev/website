@@ -35,10 +35,10 @@ def load():
             return make_response(jsonify({}), 200)
         if counter == 0:
             posts = Dbase.getPosts(counter, quantity)
-            print(f"Returning posts 0 to {quantity}")
+            print("Returning posts 0 to ", quantity)
             return make_response(jsonify(posts), 200)
         else:
-            print(f"Returning posts {counter} to {counter + quantity}")
+            print("Returning posts ", counter," to ", counter + quantity)
             posts = Dbase.getPosts(counter, quantity)
             return make_response(jsonify(posts), 200)
 

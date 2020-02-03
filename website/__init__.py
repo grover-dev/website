@@ -28,4 +28,4 @@ from website import routes
 
 if __name__ == "__main__":    
     manager.run()
-    flaskApp.run(debug=True)
+    flaskApp.run(host="0.0.0.0")
