@@ -42,8 +42,12 @@ function loadItems() {
                 tempA.href = `${data[i].url}`;
                 var linkText = document.createTextNode(`${data[i].title}`);
                 tempA.append(linkText);
-
+            
                 template_clone.querySelector("#title").insertAdjacentElement('afterbegin',tempA);
+                
+                template_clone.querySelector('#timestamp').innerHTML = `Posted on ${data[i].timestamp} by ${data[i].user}`
+
+                
                 //template_clone.querySelector("#title").innerHTML = ` `;
                 template_clone.querySelector("#post").innerHTML = `${data[i].blurb}`;
                 scroller.appendChild(template_clone);

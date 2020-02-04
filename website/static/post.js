@@ -3,6 +3,13 @@
 var template = document.querySelector('#post_template');
 var sentinel = document.querySelector('#sentinel');
 
+
+
+//template_clone.querySelector('#timestamp').innerHTML = `Posted on ${data[i].timestamp} by ${data[i].user}`
+
+
+
+
 lists = document.getElementsByClassName("post-text")
 var results = [];
 for (i = 0; i < lists.length; i++) {
@@ -22,6 +29,9 @@ text = document.getElementById("post-text")
 var textB = text.parentNode;
 textB.removeChild(text);
 textB.innerHTML = textB.innerHTML + results;
+
+
+
 
 //loadItems();
 /*

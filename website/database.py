@@ -29,7 +29,7 @@ class Dbase():
         temp = 0
         for p in posts[::-1]:
             if temp >= index and temp <= (numPosts+index):
-                tempPosts.append({"title": p.title, "text": p.text, "blurb": p.blurb, "url":p.abs_url})
+                tempPosts.append({"title": p.title, "text": p.text, "blurb": p.blurb, "url":p.abs_url, "timestamp":p.timestamp, "user":p.user_id})
             elif temp > (numPosts+index):
                 return tempPosts
             temp += 1
@@ -100,7 +100,7 @@ class Dbase():
         posts = Post.query.filter(Post.project == project).order_by(Post.id).all()
         tempPosts = []
         for p in posts:
-            tempPosts.append({"title": p.title, "blurb": p.blurb, "url": p.abs_url , "timestamp":p.timestamp})
+            tempPosts.append({"title": p.title, "blurb": p.blurb, "url": p.abs_url , "timestamp":p.timestamp, "user":p.user_id})
         return tempPosts
 
 
