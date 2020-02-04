@@ -16,11 +16,16 @@ function loadItems() {
     fetch(`/load?c=${counter}`).then((response) => {
         //converst to json
         response.json().then((data) => {
+            document.getElementById("about-post-backup").style.visibility = "visible";
             sentinel.innerHTML = "Loading...";
             if (counter == 0 && !data.length){
-                document.getElementById("about-post-backup").style.visibility = "visible";
+                //document.getElementById("about-post-backup").style.visibility = "visible";
                 sentinel.innerHTML = "No posts found";
                 return;
+            } 
+
+            if (counter > 10){
+                document.getElementById("about-post-backup").style.visibility = "hidden";
             }
             // if no more posts/empty json, exit the function
             if (!data.length) {
@@ -42,9 +47,10 @@ function loadItems() {
                 //template_clone.querySelector("#title").innerHTML = ` `;
                 template_clone.querySelector("#post").innerHTML = `${data[i].blurb}`;
                 scroller.appendChild(template_clone);
-                document.getElementById("about-post-backup").style.visibility = "hidden";
+                //document.getElementById("about-post-backup").style.visibility = "hidden";
                 counter += 1;
             }
+            sentinel.innerHTML = "No more posts";
         })
     })
 }
