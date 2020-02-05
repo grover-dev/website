@@ -8,27 +8,19 @@ class Utils():
     def shaHash256(data):
         return hashlib.sha224(bytes(data)).hexdigest()
     
-    #FIXME: urlGen super buggy
     def urlGen(sourceName, database):
         urlTemp = sourceName.split(" ")
         tmp = ""
-        counter = 0
-        min = 4
         for word in urlTemp:
             tmp = tmp + word + "-"
-            if counter >= min:
-                tmpMod = tmp + "-" + str(datetime.now())
-                exists = database.query.filter(database.url == tmpMod).scalar()
-                if exists is None:
-                    return tmpMod
-                else:
-                    counter += 1
-            counter += 1
-        print(tmp)
+        tmp2 = tmp + str(datetime.now())
+        counter = 0
         while 1:
-            exists = database.query.filter(database.url == tmp).scalar()
+            exists = database.query.filter(database.url == tmp2).scalar()
             if exists is not None:
-                tmp = tmp + "-" + str(datetime.now()) 
-            if exists is None:
+                tmp2 = tmp + str(datetime.now())
+            else:
                 return tmp
-        return None
+            counter += 1
+            if counter > 10:
+                return None
