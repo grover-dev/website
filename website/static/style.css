@@ -141,9 +141,11 @@
 }
 
 .post .post-text{
-    font-size: 18pt;
+    font-size: 16pt;
     text-align: left;
+    margin-botton: 10px;
 }
+
 
 .post img{
     display: block;
