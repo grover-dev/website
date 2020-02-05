@@ -5,10 +5,7 @@ var sentinel = document.querySelector('#sentinel');
 
 var title = document.getElementById('title');
 
-var contents = title.innerHTML;
-contents = contents.split(" ")
-contents = contents.join("")
-console.log(contents)
+var contents = window.location.pathname;
 
 
 

@@ -102,6 +102,14 @@ class Dbase():
         for p in posts:
             tempPosts.append({"title": p.title, "blurb": p.blurb, "url": p.abs_url , "timestamp":p.timestamp, "user":p.user_id})
         return tempPosts
+    
+    def getPostsByProjectAbsUrl(absUrl):
+        print("get project posts by absUrl", absUrl)
+        posts = Post.query.filter(Post.abs_url.contains(absUrl)).order_by(Post.id).all()
+        tempPosts = []
+        for p in posts:
+            tempPosts.append({"title": p.title, "blurb": p.blurb, "url": p.abs_url , "timestamp":p.timestamp, "user":p.user_id})
+        return tempPosts
 
 
     def numPosts():

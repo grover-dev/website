@@ -77,7 +77,7 @@ def postLoad():
             posts = Dbase.getPostsType("long")
             return make_response(jsonify(posts), 200)
         else:
-            response = Dbase.getPostsByProjectTitle(numPosts)
+            response = Dbase.getPostsByProjectAbsUrl(numPosts)
             if len(response) > 0:
                 return make_response(jsonify(response), 200)
             else:
