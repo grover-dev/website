@@ -129,10 +129,12 @@
 .post a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 .post a:hover{
     color: darkgray;
+    font-weight:bold;
 }
 
 
