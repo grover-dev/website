@@ -29,7 +29,7 @@ class Dbase():
         temp = 0
         for p in posts[::-1]:
             if temp >= index and temp <= (numPosts+index):
-                tempPosts.append({"title": p.title, "text": p.text, "blurb": p.blurb, "url":p.abs_url, "timestamp":p.timestamp, "user":p.user_id})
+                tempPosts.append({"title": p.title, "text": p.text, "blurb": p.blurb, "url":p.abs_url, "timestamp":p.timestamp, "user":p.user_id, "project":p.project})
             elif temp > (numPosts+index):
                 return tempPosts
             temp += 1

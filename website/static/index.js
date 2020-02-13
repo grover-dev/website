@@ -44,7 +44,7 @@ function loadItems() {
                 tempA.append(linkText);
             
                 template_clone.querySelector("#title").insertAdjacentElement('afterbegin',tempA);
-                
+                template_clone.querySelector('#project').innerHTML = ` - ${data[i].project}`
                 template_clone.querySelector('#timestamp').innerHTML = `Posted on ${data[i].timestamp} by ${data[i].user}`
 
                 

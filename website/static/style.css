@@ -113,7 +113,7 @@
     margin-top: -10px;
     margin-left: 100px;
     margin-right: 120px;
-    ont-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: block;
 }
 
@@ -156,25 +156,30 @@
 }
 
 .post .post-timestamp{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12pt;
     display:block;
     text-align: left;
 }
 
+.post .post-header h1{
+    display: inline;
+}
 
+.post .post-project{
+    
+    font-size: 20pt;
+}
 
-.post-title{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.post .post-title{
+    
+    font-size: 24pt;
 }
 
 .post-text{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display:block;
 }
 
 .sentinel{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display:block;
     text-align: center;
 }
