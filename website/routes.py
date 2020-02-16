@@ -107,7 +107,7 @@ def projectLoad():
                 return make_response(jsonify({}), 404)
 
 
-
+#pulls data for project, including all posts and project blurb
 @flaskApp.route("/projects/<url>")
 def projectsSun(url):
     urlData = (Dbase.getProjectByShortUrl(url))
@@ -118,11 +118,12 @@ def projectsSun(url):
     else:
         return render_template("404.html"), 404
 
+#pulls all posts for a given project
 @flaskApp.route("/projects/<url>/<url2>")
 def projectsSub2(url, url2):
     postData = Dbase.getPostByShortUrl(url2)
     postData.update({"jslink":"post.js"})
-    print(postData)
+    #print(postData)
     if len(postData) > 0:
         return render_template("post-template.html", title=postData)
     else:

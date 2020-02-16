@@ -145,7 +145,7 @@
 .post .post-text{
     font-size: 16pt;
     text-align: left;
-    margin-botton: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -166,17 +166,22 @@
 }
 
 .post .post-project{
-    
     font-size: 20pt;
 }
 
 .post .post-title{
-    
     font-size: 24pt;
 }
 
 .post-text{
     display:block;
+}
+
+.post .project-blurb{
+    font-size: 18pt;
+    margin-bottom: 10px;
+    display:block;
+    margin-left: 39px;
 }
 
 .sentinel{
