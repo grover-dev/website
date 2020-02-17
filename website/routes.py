@@ -1,6 +1,6 @@
 from website import flaskApp, db#, cache
 import flask
-from flask import render_template, send_from_directory, request, jsonify, make_response
+from flask import render_template, send_from_directory, request, jsonify, make_response, send_from_directory
 from flask_cache import Cache
 import random
 from .database import Dbase
@@ -145,10 +145,13 @@ def longterm():
     return render_template("projects-template.html", title=title)
     
 
-
-
-
-
+@flaskApp.route("/images/<url>/<url2>")
+def images(url, url2):
+    directory = "D:/triangulum/website/static/images/" + url + "/"
+    try:
+        return send_from_directory(directory, filename=url2,  as_attachment=True)
+    except FileNotFoundError:
+        abort(404)
 
 @flaskApp.route("/salvador")
 def salvador():
