@@ -1,6 +1,6 @@
 from website import flaskApp, db#, cache
 import flask
-from flask import render_template, send_from_directory, request, jsonify, make_response, send_from_directory
+from flask import render_template, send_from_directory, request, jsonify, make_response, send_from_directory, abort
 from flask_cache import Cache
 import random
 from .database import Dbase
@@ -144,12 +144,20 @@ def longterm():
     title = {'title': 'Long Term Projects', 'jslink': 'long-term-projects.js'}
     return render_template("projects-template.html", title=title)
     
-
+#TODO: Add path to config
 @flaskApp.route("/images/<url>/<url2>")
 def images(url, url2):
     directory = "D:/triangulum/website/static/images/" + url + "/"
     try:
         return send_from_directory(directory, filename=url2,  as_attachment=True)
+    except FileNotFoundError:
+        abort(404)
+
+@flaskApp.route("/download/<directory>/<file>")
+def download(directory, file):
+    directory = "D:/triangulum/website/static/files/" + directory + "/"
+    try:
+        return send_from_directory(directory, filename=file)
     except FileNotFoundError:
         abort(404)
 

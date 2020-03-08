@@ -8,6 +8,7 @@
     top:  0;
     text-align: center;
     margin-top: -20px;
+    z-index: 0;
 }
 .title h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +16,7 @@
     width: 100%;
     background-color: white;
     text-align: center;
-    z-index: 999;
+    z-index: 0;
     margin-bottom: 3px;
     padding: 0px;
 }
@@ -25,6 +26,7 @@
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 35px;
+    z-index: 1;
 }
 .navbar ul{
     list-style-type: none;

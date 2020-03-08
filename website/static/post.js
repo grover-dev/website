@@ -21,6 +21,14 @@ for (i = 0; i < lists.length; i++) {
     texts = results[i].split("&lt;");
     texts = texts.join("<");
     results[i] = texts;
+
+    texts = results[i].split("”")
+    texts = texts.join("\"")
+    results[i] = texts;
+    
+    texts = results[i].split("“")
+    texts = texts.join("\"")
+    results[i] = texts;
     console.log(results)
 }
 
